@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVISENA Pro - Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="assets/css/menucolapsable.css">
+</head>
+
+<body class="dashboard-body">
+
+    <section class="app-container">
+
+        <aside id="sidebar" class="sidebar sidebar-transition">
+            
+            <section class="sidebar-top">
+                <button id="toggleSidebar" class="sidebar-toggle-btn">
+                    <i data-lucide="lock" id="toggleIcon" class="icon-lock"></i>
+                </button>
+
+                <header class="brand-header">
+                    <figure class="brand-logo-container">
+                        <img src="assets/images/logo-sena-verde-complementario-svg-2022.svg" alt="SENA" class="brand-logo">
+                    </figure>
+                    <hgroup class="brand-text-group">
+                        <h1 class="brand-title">AVISENA</h1>
+                        <p class="brand-subtitle">Aprendiz</p>
+                    </hgroup>
+                </header>
+
+                <nav class="main-navigation">
+                    
+                    
+
+                    <section class="dropdown-container">
+                        <button onclick="toggleDropdown('menu-registros', 'icon-registros')" class="nav-item dropdown-trigger">
+                            <i data-lucide="clipboard-list" class="icon-nav"></i>
+                            <span class="nav-text flex-1 text-left">Registros</span>
+                            <i data-lucide="chevron-down" id="icon-registros" class="chevron-icon"></i>
+                        </button>
+                        <nav id="menu-registros" class="submenu">
+                            <button onclick="navigateTo('prodfunfinal.html')" class="submenu-item">Producción Diaria</button>  
+                            <button onclick="navigateTo('registro_clasificacion.html')" class="submenu-item">Clasificación Huevos</button>
+                            <button onclick="navigateTo('mortalidad.html')" class="submenu-item">Mortalidad</button>
+                            <button onclick="navigateTo('morbilidad.html')" class="submenu-item">Morbilidad</button> 
+                        </nav>
+                    </section>
+                    
+                    <section class="dropdown-container">
+                        <button onclick="toggleDropdown('menu-reportes', 'icon-reportes')" class="nav-item dropdown-trigger">
+                            <i data-lucide="file-text" class="icon-nav"></i>
+                            <span class="nav-text flex-1 text-left">Reportes</span>
+                            <i data-lucide="chevron-down" id="icon-reportes" class="chevron-icon"></i>
+                        </button>
+                        <nav id="menu-reportes" class="submenu">
+                            <button onclick="navigateTo('rep_diario.html')" class="submenu-item">Producción Diaria</button>
+                            <button onclick="navigateTo('rep_alimento.html')" class="submenu-item">Consumo Alimento</button>
+                            <button onclick="navigateTo('rep_mortalidad.html')" class="submenu-item">Mortalidad Aves</button>
+                            <button onclick="navigateTo('rep_finanzas.html')" class="submenu-item">Finanzas Granja</button>
+                        </nav>
+                    </section>
+                    
+                    <button onclick="navigateTo('notificaciones.html')" class="nav-item">
+                        <i data-lucide="bell" class="icon-nav"></i>
+                        <span class="nav-text">Notificaciones</span>
+                    </button>
+
+
+
+                </nav>
+            </section>
+
+            <footer class="sidebar-footer">
+                
+            </footer>
+        </aside>
+
+        <main class="content-wrapper">
+            <header class="top-bar">
+                <h2 class="page-title" id="page-title"></h2>
+                <article class="user-meta">
+                    <section class="user-details">
+                        <p class="user-role">Aprendiz</p>
+                        <p class="user-status">Online</p>
+                        <section>
+                            <a href="perfil_configuracion_cerrarsesion.html">
+                                <p class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary" data-alt="Detailed avatar in profile menu" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApbrXdV-ClSlom1jVI3ZhEz90D6WyTGdXNw7IOS8SqbHrAy_3JoRNnPUrPK3zkBzoSVenDi3BCAWcK20aAYMu2mwhmsn1w83Dv-7GaHkHTWeSQhxtadlf6Ft5nS7cQ_sPhbjgiPFznfGHvUQZKNv_TArqmZCETfTrkc6NGpTLp1KL3pSyhgGlT9ARCDp_i0y38_p2rxq9J8ZQPNNEa--zB79FULuRrRqxtUyxgV_ftfLp65hethjJKMGHbzfry-wfjFTW1WnU_5zk0");'></p>
+
+                            </a>
+                    </section>
+                    </section>
+                </article>
+            </header>
+
+            <section id="main-view" class="view-container fade-in">
+                </section>
+        </main>
+    </section>
+
+    <script src="assets/js/menucolapsable.js"></script>
+</body>
+</html>
